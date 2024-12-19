@@ -1,0 +1,78 @@
+CptS 121 - Program Design and Development
+Programming Assignment 1: Equation Evaluator
+Assigned: Friday, August 30, 2024
+Due: Friday, September 6, 2024 by midnight
+I. Learner Objectives:
+At the conclusion of this programming assignment, participants should be able to:
+Analyze a basic set of requirements for a problem and derive logical solutions
+to them
+Declare variables
+Apply C data types and associated mathematical operators
+Comment a program according to class standards
+Logically order sequential C statements to solve small problems
+Compose a small C language program
+Compile a C program using Microsoft Visual Studio 2022
+Execute a program
+Create basic test cases for a program
+II. Prerequisites:
+Before starting this programming assignment, participants should be able to:
+Access Microsoft Visual Studio 2022 Integrated Development Environment (IDE)
+Summarize topics from Hanly & Koffman Chapters 1 – 2 including:
+The steps of the software development method
+C language elements (preprocessor directives, reserved words, and
+standard identifiers)
+The standard C data types
+The general form of a high-level program
+III. Overview & Requirements:
+Write a C program that evaluates the equations provided below. All equations should
+be placed in a single project! The program must prompt the user for inputs to the
+equations and evaluate them based on the inputs. All variables on the right hand sides
+of the equations must be inputted by the user. All variables, except for the
+plaintext_character, encoded_character, offset, and variable a are floating-point
+values. The plaintext_character and encoded_character variables are characters, and
+the offset and a variable are integers. PI, G must be defined as a constant macros
+(#defined constants). Error checking is NOT required for your program. You do NOT
+need to check for faulty user input or dividing by zero.
+1. Newton’s Second Law of Motion: force = mass * acceleration
+2. Volume of a cylinder: volume_cylinder = PI * radius2 * height
+Andrew S. O’Fallon 2
+3. Character encoding: encoded_character = offset + (plaintext_character - 'a') +
+'A' (note: what happens if plaintext_character is lowercase?)
+4. Gravity: force = G * mass1 * mass2 / distance2, where G is the gravitational
+constant with value 6.67 * 10-11
+5. Fahrenheit to Celsius conversion: celsius = (fahrenheit – 32) / (9 / 5) (note: the
+9 and 5 constants in the equation should be left as integers initially, but
+explicitly type-casted as floating-point values)
+6. Distance between two points: distance = square root of ((x1 - x2)2 + (y1 - y2)2)
+(note: you will need to use sqrt ( ) out of <math.h>)
+7. General equation: y = (89 / 27) - z * x + a / (a % 2) (recall: a is an integer; the
+89 and 27 constants in the equation should be left as integers initially, but
+explicitly type-casted as floating-point values)
+IV. Expected Results:
+The following console window illustrates inputs and outputs that are appropriate for
+your program. Your program must display the results in a similar form as shown in the
+window. The window shows possible results, for the given input tests, for the first two
+equations only.
+Note: you will need to display the results for all of the equations!
+V. Submitting Assignments:
+1. Using Canvas https://canvas.wsu.edu/, please submit your solution to the
+correct “Programming Assignments” (PA) folder. Your solution should be zipped
+into a .zip file with the name <your last name>_PA1.zip and uploaded.
+To upload your solution, please navigate to your correct Canvas lab course
+space. Select the “Assignments” link in the main left menu bar. Navigate to the
+correct PA submission folder. Click the “Start Assignment” button. Click the
+“Upload File” button. Choose the appropriate .zip file with your solution.
+Finally, click the “Submit Assignment” button.
+2. Your project should contain your C source file (which must be a .c file).
+3. Your project must build properly. The most points an assignment can receive if
+it does not build properly is 65 out of 100.
+VI. Grading Guidelines:
+Andrew S. O’Fallon 3
+This assignment is worth 100 points. Your assignment will be evaluated based on a
+successful compilation and adherence to the program requirements. We will grade
+according to the following criteria:
+5 pts for correct declaration of constant macros
+35 pts for proper prompts and handling of input (5 pts/equation)
+49 pts for correct calculation of results based on given inputs (7 pts/equation)
+11 pts for adherence to proper programming style established for the class and
+comments
