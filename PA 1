@@ -1,0 +1,81 @@
+/*
+
+	Programmer: Nathan Rim
+	Class: Cpts 121, Fall 2024; Lab Section 15
+	Programming Assignment: PA1
+	Date: September 3, 2024
+
+*/
+
+#define _CRT_SECURE_NO_WARNINGS // necessary to ignore scanf_s () warnings
+#define PI 3.14
+#define G 6.67e-11 // or 0.000000000067
+
+// char symbol = '\0', symbol 2 = 'A'; <- null character, ASCII code = 0
+// function declaration - function prototype
+
+#include <stdio.h> // necessary to use printf () and scanf ()
+#include <math.h>
+
+int main(void) // the starting point for all C programs
+{
+	// 1. Task 1 of the programming assignment
+	double number1_float = 0.0, number2_float = 0.0;
+
+	printf("Please enter the mass and acceleration (both floating point values) for use in Newton's second law: "); 
+	scanf("%lf%lf", &number1_float, &number2_float);
+	double multiply1 = number1_float * number2_float;
+	printf("Newton's second law: mass * acceleration = %lf\n\n", multiply1);
+
+	// 2. Task 2 of the programming assignment
+	double radius1_float = 0.0, height2_float = 0.0;
+
+	printf("Please enter the radius and height (both floating point values) for use in a volume of a cylinder equation: ");
+	scanf("%lf%lf", &radius1_float, &height2_float);
+	double multiply2 = radius1_float * radius1_float * height2_float * PI;
+	printf("Volume of a cylinder: heigher * radius^2 * PI = %lf\n\n", multiply2);
+	
+	// 3. Task 3 of the programming assignment
+	char plaintext_character = '\0';
+	int offset = 0;
+
+	printf("Please enter the following values to find the encoded character: ");
+	scanf(" %c%d", &plaintext_character, &offset);
+	char encoded_character = offset + (plaintext_character - 'a') + 'A';
+	printf("The plain text character when it is a capital letter: %c\n\n", encoded_character);
+
+	// 4. Task 4 of the programming assignment
+	double mass1_float = 0.0, mass2_float = 0.0, distance_float = 0.0;
+
+	printf("Please enter mass 1, mass 2, and the distance (all floating point values) for use in gravity: ");
+	scanf("%lf%lf%lf", &mass1_float, &mass2_float, &distance_float);
+	double w = G * mass1_float * mass2_float / (distance_float * distance_float);
+	printf("The force of gravity: G * mass 1 * mass 2 / distance^2 = %.13lf\n\n", w);
+
+	// 5. Task 5 of the programming assignment
+	double fahrenheit_float = 0.0;
+
+	printf("Please enter the fahrenheit (floating point value) for the conversion to celcius: ");
+	scanf("%lf", &fahrenheit_float);
+	double x = (fahrenheit_float - 32) / ((float)9 / (float)5);
+	printf("The conversion to celcius: (fahrenheit - 32) / (9 / 5) = %lf\n\n", x); // %e works as well
+
+	// 6. Task 6 of the programming assignment
+	double x1_float = 0.0, x2_float = 0.0, y1_float = 0.0, y2_float = 0.0;
+
+	printf("Please enter x1, x2, y1, and y2 to find distance between two point: ");
+	scanf("%lf%lf%lf%lf", &x1_float, &x2_float, &y1_float, &y2_float);
+	double multiply = sqrt((x1_float - x2_float) * (x1_float - x2_float) + (y1_float - y2_float) * (y1_float - y2_float));
+	printf("The distance between the two points: square root of ((x1 - x2)^2 + (y1 - y2)^2) = %lf\n\n", multiply); 
+
+	// 7. Task 7 of the programming assignment (%% to display module)
+	int a = 0;
+	double y = 0, x1 = 0, z = 0;
+
+	printf("Please enter the following variables (x,z,a) for the general equation: ");
+	scanf("%lf%lf%d", &z, &x1, &a);
+	y = ((double)89 / 27) - z * x1 + a / (a % 2);
+	printf("The general equation: (89 / 27) - z * x + a / a %% 2 = %lf\n", y);
+
+	return 0;
+}
